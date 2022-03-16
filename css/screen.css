@@ -19,9 +19,10 @@
 html {
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Inter Webz", sans-serif;
+  /*font-family: "Inter Webz", sans-serif;*/
+  font-family: "droid-serif", Georgia, serif;
   color: #111;
-  padding: 48px 24px 24px;
+  padding: 48px 0px 0px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-smoothing: grayscale;
 }
@@ -39,7 +40,7 @@ body {
  */
 
 ::selection {
-  background: #00a1e6;
+  background: #00A1E6;
   color: white;
   text-shadow: none;
 }
@@ -63,12 +64,14 @@ img {
 h1,
 h2 h3 {
   color: #17181a;
+  font-family: "Inter Webz", "Helvetica Neue", Helvetica, arial, sans-serif;
 }
 
 h1 {
   font-size: 36px;
   line-height: 40px;
   margin: 0 0 24px;
+  font-family: "Playfair Display", serif;
 }
 
 h2 {
@@ -78,7 +81,7 @@ h2 {
 }
 
 * + h2 {
-  margin-top: 24px;
+  margin-top: 48px;
 }
 
 h3 {
@@ -188,9 +191,9 @@ a:focus {
 
 /*article*/
 .c-article__header,
-.c-artivle__body {
+.c-article__body {
   max-width: 1200px;
-  margin: 0auto;
+  margin: 0 auto;
 }
 
 .c-article__header {
@@ -201,14 +204,11 @@ a:focus {
   padding: 0px 24px;
 }
 
+
+
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
   html {
     padding: 48px 48px 24px;
   }
@@ -222,6 +222,15 @@ a:focus {
     padding: 48px 48px 24px;
   }
 
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+  .c-article__header{
+    padding: 48px 48px 24px;
+  }
+
   .c-article__author {
     padding-bottom: 24px;
   }
@@ -231,9 +240,6 @@ a:focus {
   }
 }
 
-.u-max-width-sm {
-  max-width: 36em;
-}
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
@@ -250,14 +256,16 @@ a:focus {
   .c-article__content {
     width: 75%;
   }
+}
 
-  .c-author {
+@media (min-width: 992px){
+  .c-author{
     flex-direction: column;
     align-items: start;
   }
 }
-
 /* Extra large devices (large desktops, 1200px and up) */
+
 
 @media (min-width: 1200px) {
 }
@@ -327,4 +335,9 @@ a:focus {
   h3 {
     page-break-after: avoid;
   }
+}
+
+
+.u-max-width-sm {
+  max-width: 36em;
 }
